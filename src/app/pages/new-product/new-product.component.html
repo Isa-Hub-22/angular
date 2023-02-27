@@ -1,0 +1,98 @@
+
+
+<form 
+    *ngIf="productForm"
+    (submit)="createNewProduct()"
+    [formGroup]="productForm"
+    name="product"
+    required
+ 
+    >
+    <div class="container">
+        <input 
+        class="form__input"
+        placeholder="Nombre"
+        formControlName="name"
+        required
+        >
+        <p 
+        *ngIf="!productForm.get('name')?.valid && productForm.get('name')?.touched"
+        [ngStyle]="{ color: 'red'}"
+        > El nombre es requerido </p>
+    
+   
+        <input 
+        class="form__input"
+        placeholder="Precio"
+        formControlName="price"
+        required
+   
+        >
+        <p 
+        *ngIf="!productForm.get('price')?.valid 
+        && productForm.get('price')?.touched
+        && productForm.get('price')?.errors?.['required']"
+        
+        [ngStyle]="{ color: 'red'}"
+        > El precio es requerido </p>
+        <p 
+        *ngIf="!productForm.get('price')?.valid 
+        && productForm.get('price')?.touched
+        && productForm.get('price')?.errors?.['maxlength']"
+        
+        [ngStyle]="{ color: 'red'}"
+        > El valor excede la longitud máxima, 6 caracteres </p>
+    
+        <textarea
+        class="form__input"
+        placeholder="Descripcion"
+        formControlName="description"
+       
+        ></textarea>
+        <p 
+        *ngIf="!productForm.get('description')?.valid && productForm.get('description')?.touched"
+        [ngStyle]="{ color: 'red'}"
+        > La descripción es requerida </p>
+ 
+        <input 
+        class="form__input"
+        placeholder="color"
+        formControlName="color"
+        required
+        
+        >
+        <p 
+        *ngIf="!productForm.get('color')?.valid && productForm.get('color')?.touched"
+        [ngStyle]="{ color: 'red'}"
+        > El color es requerido </p>
+    
+        <input 
+        class="form__input"
+        placeholder="Imagen"
+        formControlName="img"
+        required
+      
+        >
+        <p 
+        *ngIf="!productForm.get('img')?.valid && productForm.get('img')?.touched"
+        [ngStyle]="{ color: 'red'}"
+        > La imagen es requerida </p>
+    
+    <button
+    class="button"
+    type="submit"
+    [disabled]="!productForm.valid"
+    >
+        {{ canEdit ? 'Editar producto' : 'Crear producto' }}  
+    </button>
+</div>
+<div
+    class="img__container"
+    [ngStyle]="{
+        'background-image': 'url(' + urlImg + ')',
+        'object-fit': 'contain'
+    }"
+></div>
+</form>
+
+

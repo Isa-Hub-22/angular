@@ -1,0 +1,34 @@
+.container{
+    width: 100%;
+    // height: 450px;
+    display: flex;
+    flex-wrap: nowrap;
+    color:black;
+    background-image: url(https://img.freepik.com/foto-gratis/pinceles-manchados-pintura_23-2148002368.jpg?w=2000&t=st=1675986235~exp=1675986835~hmac=68636633c7690c8e23eb5e8b899536338cfef11505649fb16fcc6ea9c3728ad3);
+    background-color: rgba(74, 162, 44, 0.598);
+    object-fit: contain;
+    object-position: center;
+    background-size: 100%;
+    background-position: center;
+    margin-right: 200px;
+    padding-top: 155px;
+    padding-bottom: 155px;
+       
+}
+
+h2{   
+    font-size: 58px;
+    margin-left: 200px; 
+}
+
+p{
+    font-size: 30px;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.767);
+    width: 70%;
+    padding: 50px;
+   
+   
+} 
+
+      

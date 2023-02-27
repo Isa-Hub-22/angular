@@ -1,0 +1,37 @@
+.product{
+    width: 300px;
+    margin-right: 24px;
+    border: 1px solid lightgray;
+    margin-bottom: 24px;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.product__img{
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid black;
+}
+.add__product{
+    background-color: lightgray;
+    padding: 10px;
+   
+    border: none;
+    margin-bottom: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.text{
+    margin-left: 8px;
+    width: 100%;
+}
+.product_remove{
+    background-color: rgb(232, 148, 148);
+    padding: 10px;
+    border: none;
+    margin-bottom: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}

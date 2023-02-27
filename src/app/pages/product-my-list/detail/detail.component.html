@@ -1,0 +1,33 @@
+<div *ngIf="product"
+    class="product">
+
+    <img class="product__img" [src]="product.img" />
+    <div class="text">
+        <h3>{{product.name}}</h3>
+        <p class="description">{{product.description}}</p>
+        <p>{{product.color}}</p>
+        <p>{{product.price}}</p>
+    </div>
+    
+    <!-- <button  
+    [routerLink]="['/product-detail/', product.id]" 
+    class="add__product">Ver</button> -->
+
+    <button  
+    (click)="navigateToDetail()"
+    class="add__product">Ver</button>
+
+    <button  
+    (click)="editProduct()"
+    class="add__product">Editar</button>
+        
+    <button 
+    class="product_remove"
+    (click)="removeProduct()">Eliminar</button>
+   
+    <!-- <button 
+    class="add__product" 
+    (click)="onPress()">Comprar</button> -->
+    
+    
+</div>

@@ -1,0 +1,27 @@
+
+<div class="container">
+    <div class="add">
+        <p>Productos añadidos al carrito {{contador}}</p>
+    </div>
+   
+        <div class="pagination">
+            <a 
+                *ngFor="let number of pages" 
+                [ngClass]="{'active' : active == number}" 
+                (click)="active = number" > 
+            {{ number }}
+        </a>
+        </div>
+</div>
+
+
+
+<div class="list">
+    <app-detail
+    *ngFor="let productEl of (products | priorityName:active)"
+    [product]="productEl"
+    (newItemEvent)="addItem()"
+    (onRemove)="removeProductFromList(productEl.id)"
+    ></app-detail>
+    
+</div>

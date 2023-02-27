@@ -1,0 +1,27 @@
+
+
+<div *ngIf="product;  " class="container">
+    <div>
+        <img class="product__img" [src]="product.img">
+    </div>
+    
+    <div class="text">
+        
+        <h3>{{product.name}}</h3>
+        <p>Id: {{product.id}}</p>   
+        <p>{{product.description}}</p>
+        <p>{{product.color}}</p>
+        <p class="price">{{product.price}} €</p>
+        <p>Autor: {{ extraInfoAuthor.name }}</p>
+        <p>Ciudad: {{ extraInfoAuthor.city }}</p>
+            
+    </div>
+
+
+
+    <ng-template #productNotFound>
+        <p>No existe un producto con ese id</p>
+    </ng-template>
+</div>
+
+

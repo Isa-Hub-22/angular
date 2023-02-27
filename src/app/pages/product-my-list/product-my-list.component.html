@@ -1,0 +1,12 @@
+
+
+<div class="container">
+    <div class="add">
+
+<div class="list">
+    <app-detail
+    *ngFor="let productEl of products"
+    [product]="productEl"
+    (newItemEvent)="addItem()"
+    ></app-detail>
+</div>

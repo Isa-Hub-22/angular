@@ -1,0 +1,48 @@
+.container{
+    margin-top: 70px;
+    margin-bottom: 20px;
+   
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px; 
+ 
+}
+
+.form__input{
+
+    padding-top: 40px;
+    padding-right: 100px;
+    width: 30%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    cursor: pointer;
+     
+}
+
+button{
+    width: 160px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    background-color: lightgray;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+.img__container{
+    width: 500px;
+    height: 300px;
+    margin: auto;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  
+
+   
+  
+}
